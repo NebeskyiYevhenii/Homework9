@@ -8,9 +8,12 @@ namespace DAL
 {
     public class Storage
     {
-        public Storage(int warehouseSize)
+        public int warehouseSize;
+        public List<Product> Products = new List<Product>();
+
+        public Storage(int warehouseSize1)
         {
-            Product[] storage = new Product[warehouseSize];
+            warehouseSize = warehouseSize1;
         }
     }
 }
