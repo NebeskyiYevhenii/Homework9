@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="BasicItem.cs" />
     <Compile Include="Validation.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="ListBasicItem.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

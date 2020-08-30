@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Menu
+    public class ListBasicItem
     {
-        
         public static List<BasicItem> FillingInBasicGoods()
         {
             List<BasicItem> BasicGoodsList1 = new List<BasicItem>();
@@ -21,22 +20,20 @@ namespace DAL
             Console.WriteLine("Введите типы товаров хранящиеся на складе");
             while (menuItem != 0)
             {
-                
-                Console.WriteLine("Введите тип №" + i);
+                Console.Write("Введите тип №" + i + ": ");
                 nameType = Console.ReadLine();
-                //BasicGoodsList[i-1,0] = Console.ReadLine();
                 
-                Console.WriteLine("Введите срок годности товара: " + nameType);
+                Console.Write("Введите срок годности товара " + nameType + ": ");
                 shelfLife = Validation.intValidation();
-                //BasicGoodsList[i-1,1] = Console.ReadLine();
+
                 BasicGoodsList1.Add(new BasicItem(nameType, shelfLife));
                 i++;
 
                 Console.Clear();
-                Console.WriteLine("1. Добавить новый тип\n0. Выйти");
+                Console.WriteLine("1. Добавить новый тип\n0. Завершить");
                 menuItem = Validation.intValidation();
+                Console.Clear();
             }
-
             return BasicGoodsList1;
         }
     }
